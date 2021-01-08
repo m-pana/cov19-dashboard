@@ -1,0 +1,16 @@
+<hr class="rounded">
+<h2>News from {{ countryName }}</h2>
+<div *ngIf="!newsEmpty(); else noNewsBlock">
+<div class="news_container">
+  <div *ngFor="let singleNews of countryNews" class="news">
+    <div class="title">{{ singleNews.title }}</div>
+    <div class="author">Written by {{ singleNews.username }} on {{ singleNews.date }}</div>
+    <div class="text">
+      {{ singleNews.body }}
+    </div>
+  </div>
+</div>
+</div>
+
+<ng-template #noNewsBlock><div class="no_news">Sorry, no news available yet for this country.</div></ng-template>
+<hr class="rounded">

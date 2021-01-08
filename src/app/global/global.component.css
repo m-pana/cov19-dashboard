@@ -1,0 +1,131 @@
+h3{
+  text-align: center;
+}
+p{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+tr:hover {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+}
+th{
+  background-color: #888888;
+  color:white;
+  font-size: large;
+  text-align: center;
+}
+a{
+  color: black;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+  font-size: large;
+}
+.cases{
+  background-color: #FCF5D8;
+}
+.recovered{
+  background-color: #C0E3FA;
+}
+.death{
+  background-color: #FEE2E3;
+}
+th.cases{
+  background-color: #FBE091;
+  color: black;
+}
+
+th.recovered{
+  background-color: #8CD1FF;
+  color: black;
+}
+th.death{
+  background-color: #FFA1B5;
+  color: black;
+}
+
+.update{
+  font-style: italic;
+  text-align: center;
+  font-size: 25px;
+}
+
+.arrowUp {
+  background: url('https://firebasestorage.googleapis.com/v0/b/cov19-clouds.appspot.com/o/arrow-alt-circle-up-regular.png?alt=media&token=61717c21-6050-43a9-8dfa-9f5aa0cb3706') no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 0px 2px 0px;
+}
+
+.arrowUpWhite {
+  background: url('https://firebasestorage.googleapis.com/v0/b/cov19-clouds.appspot.com/o/white_arrow_up.png?alt=media&token=e4adb235-032b-4f22-86af-19bf2e542f82') no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 0px 2px 0px;
+}
+
+.arrowUpWhite:active {
+  background: url('https://firebasestorage.googleapis.com/v0/b/cov19-clouds.appspot.com/o/white_up_arrow_filled.png?alt=media&token=d1f79db6-58e6-4adf-b9de-b9138e1d3a3c') no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 0px 2px 0px;
+}
+
+.arrowUp:active {
+  background: url('https://firebasestorage.googleapis.com/v0/b/cov19-clouds.appspot.com/o/arrow-alt-circle-up-solid.png?alt=media&token=0400d33a-8905-4e32-a949-235cfc25f6e8') no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 0px 2px 0px;
+}
+
+.arrowDown {
+  background: url('https://firebasestorage.googleapis.com/v0/b/cov19-clouds.appspot.com/o/arrow-alt-circle-down-regular.png?alt=media&token=98e4c05b-a836-4741-8829-a61771cf6d12') no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 0px 2px 0px;
+}
+
+.arrowDownWhite {
+  background: url('https://firebasestorage.googleapis.com/v0/b/cov19-clouds.appspot.com/o/white_arrow_down.png?alt=media&token=984503ca-7da8-4e7a-bbe3-c38d9f865b6c') no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 0px 2px 0px;
+}
+
+.arrowDownWhite:active {
+  background: url('https://firebasestorage.googleapis.com/v0/b/cov19-clouds.appspot.com/o/white_down_arrow_filled.png?alt=media&token=f7d71157-87bd-4dc2-b473-e84c96137de7') no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 0px 2px 0px;
+}
+
+.arrowDown:active {
+  background: url('https://firebasestorage.googleapis.com/v0/b/cov19-clouds.appspot.com/o/arrow-alt-circle-down-solid.png?alt=media&token=ca059c1a-6746-4130-9079-98ae16d35424') no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 0px 2px 0px;
+}
+
+.arrowContainer {
+  margin-top: 5px;
+}
+
+td {
+  text-align: right;
+}

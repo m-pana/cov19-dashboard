@@ -1,0 +1,42 @@
+h3 {
+  text-align: center;
+}
+.cases{
+  background-color: #FCF5D8;
+}
+.recovered{
+  background-color: #C0E3FA;
+}
+.death{
+  background-color: #FEE2E3;
+}
+
+th{
+  padding: 1%;
+  padding-left: 2%;
+  font-size: large;
+  width: 30%
+}
+td{
+  padding: 1%;
+  text-align: right;
+  padding-right: 2%;
+}
+tr:hover {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+}
+th.cases{
+  background-color: #FBE091;
+}
+
+th.recovered{
+  background-color: #8CD1FF;
+}
+th.death{
+  background-color: #FFA1B5;
+}

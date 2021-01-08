@@ -1,0 +1,41 @@
+<h3>Summary: {{ report.countryName }}</h3>
+<table class="table">
+  <tbody>
+    <tr class="cases" scope="row">
+      <th class="cases">Total cases</th>
+      <td>{{ report.totalCases | number }}</td>
+    </tr>
+    <tr class="cases" scope="row">
+      <th class="cases">New cases</th>
+      <td>{{ report.newCases | number }}</td>
+    </tr>
+    <tr class="cases" scope="row">
+      <th class="cases">Active cases</th>
+      <td>{{ report.activeCases | number }}</td>
+    </tr>
+    <tr class="recovered" scope="row">
+      <th class="recovered">New recovered</th>
+      <td>{{ report.newRecovered | number }}</td>
+    </tr>
+    <tr class="recovered" scope="row">
+      <th class="recovered">Total recovered</th>
+      <td>{{ report.totalRecovered | number }}</td>
+    </tr>
+    <tr class="recovered" scope="row">
+      <th class="recovered">Recovery rate</th>
+      <td>{{ (report.recoveryRate * 100).toFixed(2) | number }}%</td>
+    </tr>
+    <tr class="death" scope="row">
+      <th class="death">Total deaths</th>
+      <td>{{ report.totalDeaths | number }}</td>
+    </tr>
+    <tr class="death" scope="row">
+      <th class="death">New deaths</th>
+      <td>{{ report.newDeaths | number }}</td>
+    </tr>
+    <tr class="death" scope="row">
+      <th class="death">Mortality rate</th>
+      <td>{{ (report.mortalityRate * 100).toFixed(2) | number }}%</td>
+    </tr>
+  </tbody>
+</table>

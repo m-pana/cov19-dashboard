@@ -1,0 +1,14 @@
+<div *ngIf="loginHandler.userIsSignedIn(); else userNotSignedIn">
+  <img src="https://firebasestorage.googleapis.com/v0/b/cov19-clouds.appspot.com/o/user.png?alt=media&token=1b41c599-caab-4c2b-a7bd-70795971c145" alt="">
+  <b> {{ loginHandler.getUser()?.displayName }} </b>
+  <!-- The ? after the getUser() call allows for null values. -->
+  <!-- It's not going to be null anyway, userIsSignedIn() checks exactly that. -->
+  <!-- Again, it's just so that angular won't complain. -->
+  <div>
+    <button type="button" name="button" class="btn btn-danger" (click)="loginHandler.signOut()">Sign out</button>
+  </div>
+  <div *ngIf="this.router.url != '/insert-news'" >
+    <a href="insert-news" class="btn btn-success mt-2">Insert news</a>
+  </div>
+</div>
+<ng-template #userNotSignedIn><button type="button" name="button" class="btn btn-primary" (click)="loginHandler.signInWithGoogle()">Sign in with Google</button></ng-template>

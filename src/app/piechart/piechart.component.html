@@ -1,0 +1,11 @@
+<h3>Chart visualization: {{ report.countryName }}</h3>
+<div class="pie">
+  <canvas baseChart width="300" height="100"
+    [data]="pieChartData"
+    [labels]="pieChartLabels"
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend">
+  </canvas>
+</div>

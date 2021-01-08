@@ -1,0 +1,65 @@
+<div *ngIf="this.userIsAuthorized === true; else unauthorizedUser">
+  <div class="form">
+    <h1>Welcome {{ user.displayName }}!</h1>
+    <p>Insert the details about your news. Select a country from the available list.</p>
+    <form (ngSubmit)="submitNews()" ngNativeValidate>
+      <table>
+        <tr>
+          <td colspan="2" width="70%">
+            <input type="text" name="title_news" id="title_news" placeholder="Title of the news" [(ngModel)]="title" required>
+          </td>
+          <td>
+            <select class="countries" [(ngModel)]="countryName" name="countryInput" required>
+                <option value="" selected="selected" disabled>Select a country</option>
+                <option *ngFor="let country of countryNamesList" value={{country}}>{{ country }}</option>
+              </select>
+
+          </td>
+        </tr>
+        <tr>
+
+          <td colspan="3">
+            <textarea id="text_news" name="text_news" placeholder="Body of the news" [(ngModel)]="body" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <button class="button" type="submit" (click)="open()">Submit news</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+<ng-template #unauthorizedUser>
+  <div class="form">
+    <h1>Welcome {{ user.displayName }}!</h1>
+    <p>Unfortunately, <span class="errorMessage">your user is not authorized to insert news</span>. Please ask for elevated user privileges to our site administrator.</p>
+    <form>
+      <table>
+        <tr>
+          <td colspan="2" width="70%">
+            <input disabled type="text" name="title_news" id="title_news" placeholder="Title of the news">
+          </td>
+          <td>
+            <select disabled class="countries" name="countryInput">
+                <option value="" selected="selected" disabled>Select a country</option>
+              </select>
+
+          </td>
+        </tr>
+        <tr>
+
+          <td colspan="3">
+            <textarea disabled id="text_news" name="text_news" placeholder="Body of the news"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <button class="button" type="submit" disabled>Cannot submit news</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</ng-template>

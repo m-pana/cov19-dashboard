@@ -1,0 +1,13 @@
+
+<p class="status">You are in <a href="global">World</a> > {{ countryName }}</p>
+<p></p>
+<app-summary-table [report]="report"></app-summary-table>
+<p></p>
+<app-piechart [report]="report"></app-piechart>
+<p></p>
+<app-barchart [weeklyData]="weeklyTrend"></app-barchart>
+<p></p>
+<app-linechart [dayOneData]="dayOne"></app-linechart>
+<p></p>
+<app-news-display [countryName]="countryName" [countryCode]="countryCode"></app-news-display>
+<p class="update">Data last updated on {{ lastUpdated }}.</p>

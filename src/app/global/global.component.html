@@ -1,0 +1,80 @@
+<app-summary-table [report]="globalReport"></app-summary-table>
+<p></p>
+<app-piechart [report]="globalReport"></app-piechart>
+<p></p>
+<app-barchart [weeklyData]="worldWeeklyTrend"></app-barchart>
+<p></p>
+<app-linechart [dayOneData]="dayOneWorld"></app-linechart>
+<p></p>
+<app-news-display [countryName]="'World'" [countryCode]="'world'"></app-news-display>
+<p></p>
+<h3>Statistics from across the globe</h3>
+<div>
+  <table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">
+          Country
+          <div class="arrowContainer">
+            <div class="arrowUpWhite" (click)="sortCountriesReports('countryName', true)"></div>
+            <div class="arrowDownWhite" (click)="sortCountriesReports('countryName', false)"></div>
+          </div>
+        </th>
+        <th scope="col" class="cases">
+          New Cases
+          <div class="arrowContainer">
+            <div class="arrowUp" (click)="sortCountriesReports('newCases', true)"></div>
+            <div class="arrowDown" (click)="sortCountriesReports('newCases', false)"></div>
+          </div>
+        </th>
+        <th scope="col" class="cases">
+          Total cases
+          <div class="arrowContainer">
+            <div class="arrowUp" (click)="sortCountriesReports('totalCases', true)"></div>
+            <div class="arrowDown" (click)="sortCountriesReports('totalCases', false)"></div>
+          </div>
+        </th>
+        <th scope="col" class="recovered">
+          New Recoveries
+          <div class="arrowContainer">
+            <div class="arrowUp" (click)="sortCountriesReports('newRecovered', true)"></div>
+            <div class="arrowDown" (click)="sortCountriesReports('newRecovered', false)"></div>
+          </div>
+        </th>
+        <th scope="col" class="recovered">
+          Total recoveries
+          <div class="arrowContainer">
+            <div class="arrowUp" (click)="sortCountriesReports('totalRecovered', true)"></div>
+            <div class="arrowDown" (click)="sortCountriesReports('totalRecovered', false)"></div>
+          </div>
+        </th>
+        <th scope="col" class="death">
+          New deaths
+          <div class="arrowContainer">
+            <div class="arrowUp" (click)="sortCountriesReports('newDeaths', true)"></div>
+            <div class="arrowDown" (click)="sortCountriesReports('newDeaths', false)"></div>
+          </div>
+        </th>
+        <th scope="col" class="death">
+          Total deaths
+          <div class="arrowContainer">
+            <div class="arrowUp" (click)="sortCountriesReports('totalDeaths', true)"></div>
+            <div class="arrowDown" (click)="sortCountriesReports('totalDeaths', false)"></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of countriesReportsList">
+        <td style="text-align: left"><a href="country/{{ entry['countryCode'] }}">{{ entry["countryName"] }}</a></td>
+        <td class="cases">{{ entry["newCases"] | number }}</td>
+        <td class="cases">{{ entry["totalCases"] | number }}</td>
+        <td class="recovered">{{ entry["newRecovered"] | number }}</td>
+        <td class="recovered">{{ entry["totalRecovered"] | number }}</td>
+        <td class="death">{{ entry["newDeaths"] | number }}</td>
+        <td class="death">{{ entry["totalDeaths"] | number }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p class="update">Data last updated on {{ lastUpdated }}.</p>

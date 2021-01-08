@@ -1,0 +1,19 @@
+footer {
+  text-align: center;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.log{
+  text-align: right;
+  display: inline-block;
+  flex: 100px;
+  padding-left: 10px;
+}
+img{
+  height: 180px;
+  width: 500px;
+}

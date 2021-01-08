@@ -1,0 +1,11 @@
+<h3>Last week data: {{ weeklyData.countryName }}</h3>
+<div class="bar">
+  <canvas baseChart width="300" height="100"
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [chartType]="barChartType">
+  </canvas>
+</div>

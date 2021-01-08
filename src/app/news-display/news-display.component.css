@@ -1,0 +1,51 @@
+.title{
+  font-weight: lighter;
+  font-size: xx-large;
+  color: darkcyan;
+  margin-bottom: 10px;
+}
+.news:hover > .text{
+  max-height: fit-content;
+}
+.news_container{
+
+  overflow-y: scroll;
+  height: auto;
+  max-height: 700px;
+  background-color: white;
+
+}
+.author{
+  font-size: medium;
+  font-style: italic;
+
+}
+.news{
+  padding: 30px;
+
+}
+.text{
+  font-size: medium;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  height: auto;
+  max-height: 200px;
+
+}
+.news:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #eeeeee;
+}
+.button{
+  width: 100%;
+}
+.no_news{
+  font-size: large;
+  font-style: italic;
+}
+hr{
+  border-top: 1px solid lightgray;
+  border-radius: 5px;
+}
