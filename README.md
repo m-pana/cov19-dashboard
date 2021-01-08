@@ -1,2 +1,7 @@
-# cov19-dashboard
-A simple Covid-19 dashboard to visualize data about the spread of the pandemic across different parts of the globe. Made for Clouds course, EURECOM 2020.
+# Covid19 Dashboard
+This is the source code of a simple Covid-19 dashboard which displays information about the spread of the pandemic across the world.  
+It is publicly available online at https://cov19-clouds.web.app.
+
+Written in Angular and hosted by Google Firebase. The primary source of data is the [Covid19API](https://covid19api.com/).
+
+Realized for the Clouds course of EURECOM, fall semester 2020.
