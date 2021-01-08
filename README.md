@@ -4,4 +4,4 @@ It is publicly available online at https://cov19-clouds.web.app.
 
 Written in Angular and hosted by Google Firebase. The primary source of data is the [Covid19API](https://covid19api.com/).
 
-Realized for the Clouds course of EURECOM, fall semester 2020.
+Realized by Michele Panariello for the Clouds course of EURECOM, fall semester 2020.
